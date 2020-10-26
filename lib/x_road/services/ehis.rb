@@ -23,6 +23,20 @@ module XRoad
         }
         request service_path: service_path, body: body, user_id: user_id
       end
+
+      #
+      # Example usage: 
+      # XRoad::Ehis.tervishoiuametile_oppurid('123', user_id: 'EE37803312007')
+      #
+      def tervishoiuametile_oppurid(ehis_code, user_id:)
+        service_path = producer_path + '/tervishoiuametileOppurid/v1'
+        body = {
+          oasEhisKoodid: [
+            oasEhisKood: ehis_code
+          ]
+        }
+        request service_path: service_path, body: body, user_id: user_id
+      end
     end
   end
 end
