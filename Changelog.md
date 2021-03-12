@@ -1,3 +1,6 @@
+Release 0.3.2
+* Added RR464
+
 Release 0.3.1
 * Added Ehis service: tervishoiuametileOppurid
 
