@@ -1,3 +1,6 @@
+Release 0.3.3
+* Added correct RR464 service name
+
 Release 0.3.2
 * Added RR464
 

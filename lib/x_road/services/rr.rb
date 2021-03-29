@@ -32,7 +32,7 @@ module XRoad
       # 4. Parent: 45307316010 LINDA KOVVALAI, child: 47811302727 ANNE PAINE
       #
       def rr464(personal_code, relation_type:, relation_status:, user_id:)
-        service_path = producer_path + '/RR464/v1'
+        service_path = producer_path + '/RR464isikuSuhted/v1'
         body = {
           request: {
             SuhteTyyp: relation_type,
