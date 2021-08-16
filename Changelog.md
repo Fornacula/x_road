@@ -1,3 +1,6 @@
+Release 0.3.3.1
+* Moved under a new repo https://github.com/domify/x_road please update.
+
 Release 0.3.3
 * Added correct RR464 service name
 

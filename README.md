@@ -75,7 +75,7 @@ More info at source code at lib/x_road/services/*.rb
 
 ## Contributing
 
-1. Fork it ( https://github.com/gitlabeu/x_road/fork )
+1. Fork it ( https://github.com/domify/x_road/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
