@@ -67,6 +67,15 @@ More info about Rr at: https://www.riha.ee/Infos%C3%BCsteemid/Vaata/rr
 
 More info at source code at lib/x_road/services/*.rb
 
+## Useful links
+1. Short description by RIA how to join X-road: https://abi.ria.ee/xtee/et/x-tee-juhend/x-teega-liitumine
+1. More thorough instructions by RIA how to join X-road: https://www.ria.ee/et/riigi-infosusteem/x-tee/liitumine.html
+1. X-road self-service portal: https://x-tee.ee/home
+1. X-road subservices catalogue: https://x-tee.ee/catalogue/EE
+1. List of institutions and their registries available on X-road: https://www.mkm.ee/sites/default/files/x-tee_teenuseid_osutavate_asutuste_ja_infosusteemide_nimekiri.pdf
+1. X-road service metadata protocol: https://www.x-tee.ee/docs/live/xroad/pr-meta_x-road_service_metadata_protocol.html#c5-allowedmethods-request
+1. Short blog post from the viewpoint of technical project manager about instructions and biggest things to consider when joining X-road: https://andresehrenpreis.wixsite.com/blog/post/joining_xroad
+
 ## Contributors
 
 * Janno Siilbek
