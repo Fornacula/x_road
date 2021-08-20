@@ -1,4 +1,5 @@
 module XRoad
+  # Estonian Education Information System
   class Ehis < XRoad::ActiveXRoad6
     class << self
       def producer_path
