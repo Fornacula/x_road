@@ -42,9 +42,9 @@ end
 
 # Now you can check what methods are available for you:
 
-response = XRoad::Rr.available_methods
-response = XRoad::Ehis.available_methods
-response = XRoad::Kpr.available_methods
+response = XRoad::Rr.allowed_methods
+response = XRoad::Ehis.allowed_methods
+response = XRoad::Kpr.allowed_methods
 
 ```
 
@@ -52,14 +52,14 @@ response = XRoad::Kpr.available_methods
 
 Ehis - Eesti Hariduse Infosüsteem (X-tee liidestus)
 ```ruby
-response = XRoad::Ehis.available_methods
+response = XRoad::Ehis.allowed_methods
 response = XRoad::Ehis.isiku_rollid('60510319579', user_id: 'EE60510319579')
 ```
 More info about Rr at: https://www.riha.ee/Infos%C3%BCsteemid/Vaata/ehis
 
 Rr - Rahvastikuregister (X-tee liidestus)
 ```ruby
-response = XRoad::Rr.available_methods
+response = XRoad::Rr.allowed_methods
 response = XRoad::Rr.rr414('35001010036', user_id: 'EE35001010036')
 ```
 
