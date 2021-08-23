@@ -1,4 +1,5 @@
 module XRoad
+  # Population Register
   class Rr < XRoad::ActiveXRoad6
     class << self
       def producer_path

@@ -1,5 +1,6 @@
 # NB! after upgrade to V6, not tested in test nor in production
 module XRoad
+  # Pension Registry
   class Kpr < XRoad::ActiveXRoad6
     class << self
       def producer_path
