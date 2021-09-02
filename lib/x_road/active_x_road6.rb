@@ -75,8 +75,13 @@ module XRoad
         config = XRoad.configuration
         Savon.client do
           endpoint config.host
-          ssl_cert_file config.client_cert
-          ssl_cert_key_file config.client_key
+          if defined?(config.client_cert_file) && defined?(config.client_key_file)
+            ssl_cert_file config.client_cert_file
+            ssl_cert_key_file config.client_key_file
+          elsif defined?(config.client_cert_string) && defined?(config.client_key_string)
+            ssl_cert config.client_cert_string
+            ssl_cert_key config.client_key_string
+          end
           pretty_print_xml true
           ssl_verify_mode config.ssl_verify
           log true

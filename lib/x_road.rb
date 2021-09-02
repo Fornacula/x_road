@@ -21,8 +21,10 @@ module XRoad
 
   class Configuration
     attr_accessor :host
-    attr_accessor :client_cert
-    attr_accessor :client_key
+    attr_accessor :client_cert_file
+    attr_accessor :client_key_file
+    attr_accessor :client_cert_string
+    attr_accessor :client_key_string
     attr_accessor :log_level
     attr_accessor :ssl_verify
 
