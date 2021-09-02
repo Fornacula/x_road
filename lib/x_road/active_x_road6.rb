@@ -97,9 +97,6 @@ module XRoad
         end
       end
 
-
-      private
-
       def ssl_file_config?(config)
         defined?(config.client_cert_file) && defined?(config.client_key_file) && config.client_cert_file.present? && config.client_key_file.present?
       end
