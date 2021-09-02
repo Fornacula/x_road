@@ -75,10 +75,10 @@ module XRoad
         config = XRoad.configuration
         Savon.client do
           endpoint config.host
-          if self.ssl_file_config?(config)
+          if defined?(config.client_cert_file) && defined?(config.client_key_file) && config.client_cert_file.present? && config.client_key_file.present?
             ssl_cert_file config.client_cert_file
             ssl_cert_key_file config.client_key_file
-          elsif self.ssl_string_config?(config)
+          elsif defined?(config.client_cert_string) && defined?(config.client_key_string) && config.client_cert_string.present? && config.client_key_string.present?
             ssl_cert config.client_cert_string
             ssl_cert_key config.client_key_string
           end
@@ -95,17 +95,6 @@ module XRoad
             'xmlns:SOAP-ENC': 'http://schemas.xmlsoap.org/soap/encoding/'
           )
         end
-      end
-
-
-      private
-
-      def ssl_file_config?(config)
-        defined?(config.client_cert_file) && defined?(config.client_key_file) && config.client_cert_file.present? && config.client_key_file.present?
-      end
-
-      def ssl_string_config?(config)
-        defined?(config.client_cert_string) && defined?(config.client_key_string) && config.client_cert_string.present? && config.client_key_string.present?
       end
     end
 
