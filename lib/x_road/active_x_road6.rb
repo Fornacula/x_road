@@ -75,10 +75,10 @@ module XRoad
         config = XRoad.configuration
         Savon.client do
           endpoint config.host
-          if ssl_file_config?(config)
+          if self.ssl_file_config?(config)
             ssl_cert_file config.client_cert_file
             ssl_cert_key_file config.client_key_file
-          elsif ssl_string_config?(config)
+          elsif self.ssl_string_config?(config)
             ssl_cert config.client_cert_string
             ssl_cert_key config.client_key_string
           end
@@ -96,6 +96,9 @@ module XRoad
           )
         end
       end
+
+
+      private
 
       def ssl_file_config?(config)
         defined?(config.client_cert_file) && defined?(config.client_key_file) && config.client_cert_file.present? && config.client_key_file.present?
