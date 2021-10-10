@@ -26,10 +26,11 @@ module XRoad
 
       #
       # Example usage:
-      # XRoad::Ehis.isikukaart('60510319579')
-      # XRoad::Ehis.isikukaart('37803312007')
+      # XRoad::Ehis.isikukaart('39205182750')
+      # XRoad::Ehis.isikukaart('39203086818')
+      # XRoad::Ehis.isikukaart('39409060827')
       #
-      def isikukaart(personal_code)
+      def isikukaart(personal_code, user_id:)
         service_path = producer_path + '/eeIsikukaart/v1'
         body = {
           isikukood: personal_code
