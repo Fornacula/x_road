@@ -5,6 +5,7 @@ require 'x_road/active_x_road6'
 require 'x_road/services/rr.rb'
 require 'x_road/services/ehis.rb'
 require 'x_road/services/kpr.rb'
+require 'x_road/services/tam.rb'
 
 module XRoad
   class << self
