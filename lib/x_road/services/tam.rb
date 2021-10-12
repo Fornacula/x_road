@@ -4,10 +4,15 @@ module XRoad
     class << self
       def producer_path
         'GOV/70008799​/tam'
+        # 'GOV/70009770/digilugu'
       end
 
-      def producer_ns
-        'http://producers.tam.xtee.riik.ee/producer/tam'
+      def allowed_methods
+        request service_path: producer_path + '/allowedMethods'
+      end
+
+      def list_methods
+        request service_path: producer_path + '/listMethods'
       end
 
       def registriisik(personal_code)
