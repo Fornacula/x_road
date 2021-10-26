@@ -3,8 +3,7 @@ module XRoad
   class Tam < XRoad::ActiveXRoad6
     class << self
       def producer_path
-        'GOV/70008799​/tam'
-        # 'GOV/70009770/digilugu'
+        'GOV/70008799/tam'
       end
 
       def allowed_methods
