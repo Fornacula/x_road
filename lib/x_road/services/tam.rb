@@ -1,5 +1,6 @@
 module XRoad
-  # Terviseamet (Health Board)
+  # Tam is a subsystem managed by Terviseamet's (Health Board)
+  # IT-branch TEHIK.
   class Tam < XRoad::ActiveXRoad6
     class << self
       def producer_path
