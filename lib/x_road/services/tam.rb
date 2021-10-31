@@ -19,7 +19,7 @@ module XRoad
         body = {
           isikukood: personal_code
         }
-        request service_path: service_path, body: body, user_id: user_id
+        request service_path: service_path, body: body
       end
     end
   end
