@@ -10,6 +10,12 @@ require 'x_road/services/tam.rb'
 module XRoad
   class << self
     attr_writer :configuration
+
+    def through_proxy?
+      configuration.proxy_address.present? &&
+      configuration.proxy_username.present? &&
+      configuration.proxy_password.present?
+    end
   end
 
   def self.configuration
@@ -33,6 +39,11 @@ module XRoad
     attr_accessor :client_member_code
     attr_accessor :client_subsystem_code
     attr_accessor :x_road_instance # by default client_path defines it
+
+    # Proxy-server scenario
+    attr_accessor :proxy_address
+    attr_accessor :proxy_username
+    attr_accessor :proxy_password
 
     def initialize
       @log_level = :info
