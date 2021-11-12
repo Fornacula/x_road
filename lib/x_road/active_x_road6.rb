@@ -1,5 +1,3 @@
-require 'byebug'
-
 module XRoad
   class MissingXRoadHeadAttribute < ArgumentError; end
 
