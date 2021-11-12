@@ -1,4 +1,5 @@
 module XRoad
+  # Estonian Education Information System
   class Ehis < XRoad::ActiveXRoad6
     class << self
       def producer_path
@@ -22,6 +23,21 @@ module XRoad
           isikukood: personal_code
         }
         request service_path: service_path, body: body, user_id: user_id
+      end
+
+      #
+      # Example usage:
+      # XRoad::Ehis.isikukaart('39205182750')
+      # XRoad::Ehis.isikukaart('39203086818')
+      # XRoad::Ehis.isikukaart('39409060827')
+      #
+      def isikukaart(personal_code)
+        service_path = producer_path + '/eeIsikukaart/v1'
+        body = {
+          isikukood: personal_code
+        }
+        # UserID 'EE11111111111' is ment for system-queries
+        request service_path: service_path, body: body, user_id: 'EE11111111111'
       end
 
       #
