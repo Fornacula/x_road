@@ -33,3 +33,7 @@ Gemfile.lock
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+# Using byebug in dev-env results in the following file generated.
+# No need to have it in version control.
+.byebug_history
