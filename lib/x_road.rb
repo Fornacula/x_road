@@ -12,9 +12,12 @@ module XRoad
     attr_writer :configuration
 
     def through_proxy?
-      configuration.proxy_address &&
-      configuration.proxy_username &&
-      configuration.proxy_password
+      # All of the following must be defined.
+      # If at least one of these is missing, then request
+      # will not be sent through the proxy server:
+      !(configuration.proxy_address.nil? ||
+      configuration.proxy_username.nil? ||
+      configuration.proxy_password.nil?)
     end
   end
 
