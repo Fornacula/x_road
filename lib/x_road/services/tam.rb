@@ -7,14 +7,6 @@ module XRoad
         'GOV/70008799/tam'
       end
 
-      def allowed_methods
-        request service_path: producer_path + '/allowedMethods'
-      end
-
-      def list_methods
-        request service_path: producer_path + '/listMethods'
-      end
-
       def registriisik(personal_code)
         service_path = producer_path + '/registriisik/v1'
         body = {
