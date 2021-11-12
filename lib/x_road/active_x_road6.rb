@@ -1,3 +1,5 @@
+require 'byebug'
+
 module XRoad
   class MissingXRoadHeadAttribute < ArgumentError; end
 
@@ -65,15 +67,29 @@ module XRoad
         self.service_path = service_path
         action ||= ser_service_code
         ns ||= producer_ns
-
         client = create_client(ns)
-        response = client.call(action, soap_header: header, message: body)
+
+        response = if XRoad.through_proxy?
+                     request_through_proxy(client, action, header, body)
+                   else
+                     client.call(action, soap_header: header, message: body)
+                   end
+
         response.body
+      end
+
+      def request_through_proxy(client, action, header, body)
+        proxy_credentials = "#{XRoad.configuration.proxy_username}:#{XRoad.configuration.proxy_password}"
+        header['Proxy-Authorization'] = "Basic #{proxy_credentials}"
+        client.call(action, soap_header: header, message: body)
       end
 
       def create_client(ns)
         config = XRoad.configuration
         Savon.client do
+          if XRoad.through_proxy?
+            proxy XRoad.configuration.proxy_address
+          end
           endpoint config.host
           ssl_cert_file config.client_cert
           ssl_cert_key_file config.client_key
