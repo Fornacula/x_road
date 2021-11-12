@@ -12,9 +12,9 @@ module XRoad
     attr_writer :configuration
 
     def through_proxy?
-      configuration.proxy_address.present? &&
-      configuration.proxy_username.present? &&
-      configuration.proxy_password.present?
+      configuration.proxy_address &&
+      configuration.proxy_username &&
+      configuration.proxy_password
     end
   end
 
